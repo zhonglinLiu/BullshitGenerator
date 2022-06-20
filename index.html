@@ -247,28 +247,88 @@
         }
     }
 
-    .title {
+    .button {
+        background-color: #555555;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 5px 28px;
         text-align: center;
-        font-size: 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
     }
 
     .app {
         font-size: 20px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .question {
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
     }
 
     .genterator {
         text-align: center;
     }
 
-    .question {
-        text-align: center;
+    .dashang {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+        color: #111;
+    }
+
+    .dashang>a {
+        color: #333;
     }
 </style>
 <div class="app">
     <div class="title">狗屁不通文字生成器</div>
-    <div class="question">标题：<input value="一天掉多少根头发"></input>
-        <div style="margin-top: 5px;"><button class="genterator" onclick="生成文章()">生成</button></div>
+    <div>
+        <label for="fname">标题：</label>
+        <input type="text" id="fname" name="firstname" placeholder="一天掉多少根头发">
+
+        <button class="button" onclick="生成文章()">生成</button>
     </div>
+</div>
+</div>
+<div class="dashang">
+    <a href="https://dun.mianbaoduo.com/@bean">打赏作者</a> | <a href="https://app.wehere.top/?jump=true">优惠券</a>
 </div>
 
 <div id="论文"></div>
