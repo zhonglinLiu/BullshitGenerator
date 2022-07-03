@@ -3,6 +3,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap-grid.min.css"
+        rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WQ933P9');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKPJP9VB3F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WKPJP9VB3F');
+    </script>
 </head>
 <script>
 
@@ -191,6 +213,10 @@
 
     function 生成文章() {
         主题 = $('input').value
+        if(主题 == "") {
+            alert('标题不能为空')
+            return
+        }
         let 文章 = []
         for (let 空 in 主题) {
             let 章节 = "";
@@ -293,21 +319,47 @@
     .dashang>a:hover {
         color:#003c6c;
     }
+    .beian {
+            text-align: center; margin-top:20px;text-decoration: none;font-size: 14px;
+            color: #333;
+        }
+        .beian > a {
+            color: #333;
+        }
 </style>
-<div class="app">
-    <div class="title">狗屁不通文字生成器</div>
-    <div>
-        <label for="fname">标题：</label>
-        <input type="text" id="fname" name="firstname" placeholder="一天掉多少根头发">
-
-        <button class="button" onclick="生成文章()">生成</button>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ933P9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="app">
+        <div class="title">狗屁不通文字生成器</div>
+        <div>
+            <label for="fname">标题：</label>
+            <input type="text" id="fname" name="firstname" placeholder="一天掉多少根头发">
+    
+            <button class="button" onclick="生成文章()">生成</button>
+        </div>
     </div>
-</div>
-</div>
-<div class="dashang">
-    <a href="https://dun.mianbaoduo.com/@bean">打赏作者</a> | <a href="https://app.wehere.top/?jump=true">优惠券</a>
-</div>
+    </div>
+    <div id="论文"></div>
+    <div class="dashang">
+        <a href="https://dun.mianbaoduo.com/@bean?jump=true">打赏作者</a> | <a
+            href="mailto:hi.life@qq.com?subject=bullshit-generator">优惠券</a>
+    </div>
+    <div class="dashang">
+        <span style="text-decoration:underline">友情链接:</span>
+        <a href="https://app.wehere.top?jump=true"> 淘宝优惠券</a>
+        <a href="https://mango.wehere.top/tools">在线工具箱</a>
+        <a href="https://mango.wehere.top/tools/screen_record">屏幕录制</a>
+        <a href="https://mango.wehere.top/tools/screen_record">markdown编辑器</a>
+        <a href="https://app.wehere.top/periodic-table/index.html">元素周期表</a>
+        <a href="https://mango.wehere.top/avator">头像制作</a>
+    </div>
+    <div class="beian">
+        <a href="http://beian.miit.gov.cn/" target="_blank"> 豫ICP备17025106号</a> | <a>Copyright@2022 hi.life@qq.com</a>
+    </div>
+</body>
 
-<div id="论文"></div>
 
 </html>
